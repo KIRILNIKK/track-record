@@ -38,31 +38,31 @@ export default function PortfolioPage() {
         beforeImages: [
           {
             src: "/portfolio/st-catharines/before-1.jpg",
-            alt: "St. Catharines living room and entry before renovations",
+            alt: "St. Catharines house",
           },
           {
             src: "/portfolio/st-catharines/before-2.jpg",
-            alt: "St. Catharines main living space before renovations",
+            alt: "St. Catharines front door entrance before renovations",
           },
           {
             src: "/portfolio/st-catharines/before-3.jpg",
-            alt: "St. Catharines kitchen before updates",
+            alt: "St. Catharines main living space before renovations",
           },
           {
             src: "/portfolio/st-catharines/before-4.jpg",
-            alt: "St. Catharines bathroom before updates",
+            alt: "St. Catharines kitchen before updates",
           },
           {
             src: "/portfolio/st-catharines/before-5.jpg",
-            alt: "St. Catharines bedroom before staging",
+            alt: "St. Catharines bathroom before updates",
           },
           {
             src: "/portfolio/st-catharines/before-6.jpg",
-            alt: "St. Catharines second bedroom prior to improvements",
+            alt: "St. Catharines bedroom before renovations",
           },
           {
             src: "/portfolio/st-catharines/before-7.jpg",
-            alt: "St. Catharines shared laundry area before upgrade",
+            alt: "St. Catharines second bedroom before renovations",
           },
           {
             src: "/portfolio/st-catharines/before-8.jpg",
@@ -70,14 +70,14 @@ export default function PortfolioPage() {
           },
           {
             src: "/portfolio/st-catharines/before-9.jpg",
-            alt: "St. Catharines bonus room before improvements",
+            alt: "St. Catharines shared laundry area before upgrade",
           },
         ],
         afterPlaceholder: "St. Catharines refreshed finishes",
         afterImages: [
           {
             src: "/portfolio/st-catharines/after-1.jpg",
-            alt: "St. Catharines main living room after renovations",
+            alt: "St. Catharines house after renovations",
           },
           {
             src: "/portfolio/st-catharines/after-2.jpg",
@@ -85,23 +85,23 @@ export default function PortfolioPage() {
           },
           {
             src: "/portfolio/st-catharines/after-3.jpg",
-            alt: "St. Catharines kitchen with updated finishes",
+            alt: "St. Catharines main living space after renovations",
           },
           {
             src: "/portfolio/st-catharines/after-4.jpg",
-            alt: "St. Catharines bathroom after remodel",
+            alt: "St. Catharines kitchen with updated finishes",
           },
           {
             src: "/portfolio/st-catharines/after-5.jpg",
-            alt: "St. Catharines bedroom with staging",
+            alt: "St. Catharines bathroom after remodel",
           },
           {
             src: "/portfolio/st-catharines/after-6.jpg",
-            alt: "St. Catharines second bedroom post-upgrade",
+            alt: "St. Catharines bedroom post-upgrade",
           },
           {
             src: "/portfolio/st-catharines/after-7.jpg",
-            alt: "St. Catharines laundry area after renovation",
+            alt: "St. Catharines second bedroom post-upgrade",
           },
           {
             src: "/portfolio/st-catharines/after-8.jpg",
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
           },
           {
             src: "/portfolio/st-catharines/after-9.jpg",
-            alt: "St. Catharines additional space after improvements",
+            alt: "St. Catharines laundry area after renovation",
           },
         ],
       },

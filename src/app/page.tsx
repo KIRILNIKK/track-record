@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   const milestones = [
     {
       year: "2016",
-      title: "First Duplex in Brampton",
+      title: "First Two-Unit House in Brampton",
       summary:
         "Converted a tired bungalow into a functional two-unit rental—proof that sweat equity can overcome limited capital.",
     },
@@ -12,13 +13,13 @@ export default function Home() {
       year: "2017",
       title: "Expanded into St. Catharines",
       summary:
-        "Scaled to a second duplex while working full-time, learning tenant management and capital planning on the fly.",
+        "Scaled to a second two-unit while working full-time, learning tenant management and capital planning on the fly.",
     },
     {
       year: "2019-2020",
       title: "Hands-On Flip in Pickering",
       summary:
-        "Renovated our family home to create a legal suite and modern finish, demonstrating how design upgrades unlock value.",
+        "Renovated our family home to create an in-law suite and modern finish, demonstrating how design upgrades unlock value.",
     },
     {
       year: "2021-Present",
@@ -49,24 +50,40 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-12 pb-12">
       <section className="rounded-3xl bg-white p-10 shadow-sm shadow-slate-200/60">
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
-          Meet Kiril Nikolaev
-        </p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-          Canadian real estate investor turning humble beginnings into lasting
-          cash flow.
-        </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-7 text-slate-600">
-          Based in Pickering, Ontario, I bought my first duplex in 2016 with more
-          grit than capital. Since then I have owned or partnered on seven units,
-          managed tenant turnovers, navigated full-gut renovations, and exited
-          flips that unlocked significant equity. My next chapter: scaling
-          Canadian BRRRR experience into resilient U.S. multifamily.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-600">
-          <span>📍 Pickering, Ontario</span>
-          <span>📈 Investing since 2016</span>
-          <span>🤝 Open to JV conversations</span>
+        <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:gap-10">
+          <div className="flex-1">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
+              Meet Kiril Nikolaev
+            </p>
+            <h1 className="mt-3 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+              Canadian real estate investor turning humble beginnings into lasting
+              cash flow.
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-7 text-slate-600">
+              Based in Pickering, Ontario, I bought my first duplex in 2016 with more
+              grit than capital. Since then I have owned or partnered on seven units,
+              managed tenant turnovers, navigated full-gut renovations, and exited
+              flips that unlocked significant equity. My next chapter: scaling
+              Canadian BRRRR experience into resilient U.S. multifamily.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-6 text-sm text-slate-600">
+              <span>📍 Pickering, Ontario</span>
+              <span>📈 Investing since 2016</span>
+              <span>🤝 Open to JV conversations</span>
+            </div>
+          </div>
+          <div className="flex justify-center md:flex-none md:justify-end">
+            <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-xl shadow-slate-300/50 sm:h-56 sm:w-56">
+              <Image
+                src="/kiril-headshot.jpg"
+                alt="Kiril Nikolaev smiling"
+                fill
+                sizes="(max-width: 640px) 192px, 224px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
