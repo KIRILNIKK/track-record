@@ -1,8 +1,40 @@
 import Image from "next/image";
 import { PropertyCarousel } from "@/components/PropertyCarousel";
 
+type MediaImage = {
+  src: string;
+  alt: string;
+};
+
+type DealVideo = {
+  label: string;
+  url: string;
+  videoId: string;
+};
+
+type DealMedia = {
+  galleryImages?: MediaImage[];
+  beforeImages?: MediaImage[];
+  afterImages?: MediaImage[];
+  beforePlaceholder?: string;
+  afterPlaceholder?: string;
+};
+
+type Deal = {
+  name: string;
+  location: string;
+  strategy: string;
+  purchaseDate: string;
+  purchasePrice: string;
+  renovation: string;
+  exit: string;
+  keyPoints: string[];
+  media?: DealMedia;
+  videos?: DealVideo[];
+};
+
 export default function PortfolioPage() {
-  const deals = [
+  const deals: Deal[] = [
     {
       name: "Brampton Two-Unit Conversion",
       location: "Brampton, Ontario",
@@ -168,8 +200,106 @@ export default function PortfolioPage() {
         "Achieved a clean exit inside 14 months while living on-site—a true hands-on project.",
       ],
       media: {
-        beforePlaceholder: "Pickering original living areas",
-        afterPlaceholder: "Pickering modernized flip finish",
+        beforeImages: [
+          {
+            src: "/portfolio/pickering/before-1.jpg",
+            alt: "Pickering living room before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-2.jpg",
+            alt: "Pickering exterior front before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-3.jpg",
+            alt: "Pickering living room alternate angle before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-4.jpg",
+            alt: "Pickering original kitchen with wood cabinets",
+          },
+          {
+            src: "/portfolio/pickering/before-5.jpg",
+            alt: "Pickering bedroom before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-6.jpg",
+            alt: "Pickering dining area before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-7.jpg",
+            alt: "Pickering guest room before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-8.jpg",
+            alt: "Pickering kids room before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-9.jpg",
+            alt: "Pickering main bathroom before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-10.jpg",
+            alt: "Pickering basement hallway before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-11.jpg",
+            alt: "Pickering basement playroom before renovation",
+          },
+          {
+            src: "/portfolio/pickering/before-12.jpg",
+            alt: "Pickering basement recreation room before renovation",
+          },
+        ],
+        afterImages: [
+          {
+            src: "/portfolio/pickering/after-1.jpg",
+            alt: "Pickering exterior after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-2.jpg",
+            alt: "Pickering renovated basement hall",
+          },
+          {
+            src: "/portfolio/pickering/after-3.jpg",
+            alt: "Pickering renovated guest bedroom",
+          },
+          {
+            src: "/portfolio/pickering/after-4.jpg",
+            alt: "Pickering refreshed primary bedroom",
+          },
+          {
+            src: "/portfolio/pickering/after-5.jpg",
+            alt: "Pickering modernized kitchen with curved ceiling",
+          },
+          {
+            src: "/portfolio/pickering/after-6.jpg",
+            alt: "Pickering open concept dining and living area after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-7.jpg",
+            alt: "Pickering bathroom after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-8.jpg",
+            alt: "Pickering living room with feature wall after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-9.jpg",
+            alt: "Pickering living room seating after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-10.jpg",
+            alt: "Pickering home office after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-11.jpg",
+            alt: "Pickering lounge room after renovation",
+          },
+          {
+            src: "/portfolio/pickering/after-12.jpg",
+            alt: "Pickering renovated basement family room",
+          },
+        ],
       },
     },
     {
@@ -328,7 +458,7 @@ export default function PortfolioPage() {
           discipline.
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-7 text-slate-600">
-          These transactions chart my path from a first duplex conversion in
+          These transactions chart my path from a first two-unit conversion in
           Brampton to more sophisticated BRRRR executions. Every project refined
           my underwriting, renovation management, and tenant relations playbooks
           while compounding capital for the next opportunity.
