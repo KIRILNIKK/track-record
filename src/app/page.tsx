@@ -176,7 +176,7 @@ export default function Home() {
         </p>
         <div className="mt-6 flex flex-wrap gap-4 text-sm font-semibold text-slate-700">
           <a
-            href="https://www.biggerpockets.com/users/kirilnikolaev"
+            href="https://www.biggerpockets.com/users/kiriln"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full border border-slate-300 bg-white px-5 py-3 transition hover:border-slate-400 hover:bg-slate-100"
