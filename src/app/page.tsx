@@ -43,7 +43,7 @@ export default function Home() {
     {
       title: "Long-Term Relationships",
       detail:
-        "Building genuine partnerships with investors and trades has been my unfair advantage since those early duplex days.",
+        "Building genuine partnerships with investors and trades has been my unfair advantage since those early investing days.",
     },
   ];
 
@@ -60,8 +60,8 @@ export default function Home() {
               cash flow.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-7 text-slate-600">
-              Based in Pickering, Ontario, I bought my first duplex in 2016 with more
-              grit than capital. Since then I have owned or partnered on seven units,
+              Based in Pickering, Ontario, I bought my first real estate property in 2016 with more
+              grit than capital. Since then I have owned seven units,
               managed tenant turnovers, navigated full-gut renovations, and exited
               flips that unlocked significant equity. My next chapter: scaling
               Canadian BRRRR experience into resilient U.S. multifamily.
@@ -70,6 +70,7 @@ export default function Home() {
               <span>📍 Pickering, Ontario</span>
               <span>📈 Investing since 2016</span>
               <span>🤝 Open to JV conversations</span>
+              <span>🚀 Exploring future fund launch</span>
             </div>
           </div>
           <div className="flex justify-center md:flex-none md:justify-end">
