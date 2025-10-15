@@ -17,8 +17,48 @@ export default function PortfolioPage() {
         "Early proof-of-concept that thoughtful layout changes and strong screening can create durable income.",
       ],
       media: {
-        beforePlaceholder: "Brampton exterior / original main floor",
-        afterPlaceholder: "Brampton basement suite refresh",
+        galleryImages: [
+          {
+            src: "/portfolio/brampton/photo-1.jpg",
+            alt: "Brampton open living and dining area",
+          },
+          {
+            src: "/portfolio/brampton/photo-2.jpg",
+            alt: "Brampton living room with sectional",
+          },
+          {
+            src: "/portfolio/brampton/photo-3.jpg",
+            alt: "Brampton kitchen stainless fridge",
+          },
+          {
+            src: "/portfolio/brampton/photo-4.jpg",
+            alt: "Brampton kitchen stove and backsplash",
+          },
+          {
+            src: "/portfolio/brampton/photo-5.jpg",
+            alt: "Brampton kitchen galley view",
+          },
+          {
+            src: "/portfolio/brampton/photo-6.jpg",
+            alt: "Brampton renovated bathroom",
+          },
+          {
+            src: "/portfolio/brampton/photo-7.jpg",
+            alt: "Brampton upstairs bedroom",
+          },
+          {
+            src: "/portfolio/brampton/photo-8.jpg",
+            alt: "Brampton twin bedroom layout",
+          },
+          {
+            src: "/portfolio/brampton/photo-9.jpg",
+            alt: "Brampton children bedroom",
+          },
+          {
+            src: "/portfolio/brampton/photo-10.jpg",
+            alt: "Brampton basement suite bedroom",
+          },
+        ],
       },
     },
     {
@@ -115,7 +155,7 @@ export default function PortfolioPage() {
       },
     },
     {
-      name: "Pickering Legal Suite Flip",
+      name: "Pickering Flip",
       location: "Pickering, Ontario",
       strategy: "Fix & Flip",
       purchaseDate: "October 2019",
@@ -139,15 +179,105 @@ export default function PortfolioPage() {
       purchaseDate: "May 2021",
       purchasePrice: "$608,000",
       renovation: "$200,000 extensive rebuild",
-      exit: "In progress – repositioned as a fully-legal triplex",
+      exit: "Refinanced and held for long-term cash flow",
       keyPoints: [
         "Acquired as a legal duplex and executed a conversion to a fully-legal triplex.",
         "Upgraded mechanicals, fire separation, and finishes to support three high-quality units.",
         "Working closely with contractors and the city to navigate complex approvals and maximize refinancability.",
       ],
       media: {
-        beforePlaceholder: "Oshawa duplex layout prior to conversion",
-        afterPlaceholder: "Oshawa completed triplex suites",
+        beforeImages: [
+          {
+            src: "/portfolio/oshawa/before-1.jpg",
+            alt: "Oshawa kitchen before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-2.jpg",
+            alt: "Oshawa bedroom before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-3.jpg",
+            alt: "Oshawa bathroom before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-4.jpg",
+            alt: "Oshawa cluttered bedroom before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-5.jpg",
+            alt: "Oshawa primary bedroom before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-6.jpg",
+            alt: "Oshawa secondary bathroom before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-7.jpg",
+            alt: "Oshawa kids room before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-8.jpg",
+            alt: "Oshawa main living room before renovation",
+          },
+          {
+            src: "/portfolio/oshawa/before-9.jpg",
+            alt: "Oshawa basement during construction",
+          },
+          {
+            src: "/portfolio/oshawa/before-10.jpg",
+            alt: "Oshawa stairwell before finishing",
+          },
+          {
+            src: "/portfolio/oshawa/before-11.jpg",
+            alt: "Oshawa secondary kitchen before renovation",
+          },
+        ],
+        afterImages: [
+          {
+            src: "/portfolio/oshawa/after-1.jpg",
+            alt: "Oshawa renovated kitchen",
+          },
+          {
+            src: "/portfolio/oshawa/after-2.jpg",
+            alt: "Oshawa renovated bathroom with tile surround",
+          },
+          {
+            src: "/portfolio/oshawa/after-3.jpg",
+            alt: "Oshawa basement kitchen after renovation",
+          },
+          {
+            src: "/portfolio/oshawa/after-4.jpg",
+            alt: "Oshawa bright living room after renovation",
+          },
+          {
+            src: "/portfolio/oshawa/after-5.jpg",
+            alt: "Oshawa updated stairwell and flooring",
+          },
+          {
+            src: "/portfolio/oshawa/after-6.jpg",
+            alt: "Oshawa refreshed bedroom with new flooring",
+          },
+          {
+            src: "/portfolio/oshawa/after-7.jpg",
+            alt: "Oshawa second bedroom after renovation",
+          },
+          {
+            src: "/portfolio/oshawa/after-8.jpg",
+            alt: "Oshawa bedroom with mirrored closet after renovation",
+          },
+          {
+            src: "/portfolio/oshawa/after-9.jpg",
+            alt: "Oshawa finished kitchen with island",
+          },
+          {
+            src: "/portfolio/oshawa/after-10.jpg",
+            alt: "Oshawa feature wall bedroom after renovation",
+          },
+          {
+            src: "/portfolio/oshawa/after-11.jpg",
+            alt: "Oshawa combined laundry and bathroom after renovation",
+          },
+        ],
       },
       videos: [
         {
@@ -266,6 +396,16 @@ export default function PortfolioPage() {
             </ul>
             {deal.media && (
               <div className="mt-6 space-y-6">
+                {deal.media.galleryImages &&
+                  deal.media.galleryImages.length > 0 && (
+                    <div className="mx-auto w-full max-w-2xl">
+                      <PropertyCarousel
+                        title="Property Photos"
+                        images={deal.media.galleryImages}
+                      />
+                    </div>
+                  )}
+
                 {deal.media.beforeImages && deal.media.beforeImages.length > 0 ? (
                   <div className="grid gap-6 lg:grid-cols-2">
                     <PropertyCarousel
@@ -361,12 +501,12 @@ export default function PortfolioPage() {
           What&apos;s next
         </h2>
         <p className="mt-3 max-w-4xl text-sm leading-6 text-slate-600">
-          I am actively sourcing the next repositioning opportunity—ideally a
+          I am actively sourcing the next repositioning opportunity—ideally a 
           small to medium multifamily asset in Ohio or a resilient Midwest market with
-          solid fundamentals. I am open to joint ventures where I can bring
-          underwriting, permitting know-how, and contractor oversight to the
-          table. Reach out if you would like to receive deal memos as they come
-          together.
+          solid fundamentals. I will be launching a fund soon and I am also open to joint 
+          ventures where I can bring underwriting, permitting know-how, contractor, and 
+          value-add oversight to the table. Reach out if you would like to receive deal 
+          memos as they come together.
         </p>
       </section>
     </div>
